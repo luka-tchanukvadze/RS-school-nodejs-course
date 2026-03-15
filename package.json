@@ -22,7 +22,8 @@
     "zip:compressDir": "node src/zip/compressDir.js",
     "zip:decompressDir": "node src/zip/decompressDir.js",
     "wt:main": "node src/wt/main.js",
-    "cp:execCommand": "node src/cp/execCommand.js \"echo 'Hello World'\""
+    "cp:execCommand": "node src/cp/execCommand.js \"echo 'Hello World'\"",
+    "start": "node src/main.js"
   },
   "repository": {
     "type": "git",
