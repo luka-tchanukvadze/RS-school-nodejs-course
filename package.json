@@ -22,7 +22,11 @@
     "zip:compressDir": "node src/zip/compressDir.js",
     "zip:decompressDir": "node src/zip/decompressDir.js",
     "wt:main": "node src/wt/main.js",
-    "cp:execCommand": "node src/cp/execCommand.js \"echo 'Hello World'\""
+    "cp:execCommand": "node src/cp/execCommand.js \"echo 'Hello World'\"",
+    "start:dev": "nodemon src/crud-api/index.js",
+    "start:prod": "node node_modules/esbuild/bin/esbuild src/crud-api/index.js --bundle --platform=node --format=esm --outfile=dist/index.js --packages=external && node dist/index.js",
+    "start:multi": "node src/crud-api/cluster.js",
+    "test": "vitest run src/crud-api/__tests__/"
   },
   "repository": {
     "type": "git",
@@ -34,5 +38,16 @@
     "assignments"
   ],
   "author": "alreadybored",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.8.2",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.4",
+    "nodemon": "^3.1.14",
+    "vitest": "^4.1.0"
+  }
 }

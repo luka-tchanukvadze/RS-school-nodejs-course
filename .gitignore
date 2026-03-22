@@ -3,6 +3,7 @@ node_modules/
 *.log
 npm-debug.log*
 .env
+dist/
 workspace/
 workspace_restored/
 snapshot.json
